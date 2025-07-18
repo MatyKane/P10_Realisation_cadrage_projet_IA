@@ -1,73 +1,111 @@
 **Contexte**
 
-Data Scientist chez Fruits!, une startup AgriTech spécialisée dans la reconnaissance de fruits par robotique intelligente, nous avons été missionnés pour reprendre, améliorer et déployer une chaîne de traitement Big Data permettant de préparer les données d’images de fruits pour de futures prédictions via un modèle TensorFlow.
+Fashion-Insta est une entreprise du monde de la mode qui commercialise des articles vestimentaires. Elle dispose d’un réseau de magasins physiques, mais également d’un site e-commerce qui lui permet de commercialiser ses produits selon ces deux canaux.
 
-L’objectif est de traiter des données massives issues de l’application mobile de reconnaissance de fruits, à l’aide de PySpark sur un environnement AWS EMR, tout en assurant la scalabilité, la conformité RGPD et l’optimisation des coûts.
+En tant que IA Product Manager chez Fashion-Insta, j’ai piloté le cadrage d’un projet stratégique d’intelligence artificielle visant à développer une application mobile de recommandation vestimentaire personnalisée à partir de photos.
+
+L'objectif du projet est de permettre aux utilisateurs de photographier leurs tenues et d’obtenir des suggestions de vêtements similaires disponibles à la vente, en s’appuyant sur un moteur de recommandation basé sur l’IA. Le projet est mené selon une méthodologie agile SCRUM et hébergé sur l’infrastructure Microsoft Azure.
 
 ***
 
 **Objectifs**
 
-Concevoir une architecture Big Data scalable avec AWS EMR.
+Définir les besoins fonctionnels et techniques pour une application mobile IA
 
-Compléter un pipeline PySpark avec réduction de dimension (PCA).
+Formaliser un backlog complet de user stories priorisées selon MoSCoW
 
-Intégrer les poids TensorFlow pour permettre de l’inférence distribuée.
+Estimer les charges de travail, coûts de développement et d’infrastructure (Azure)
 
-Garantir la conformité RGPD en traitant les données en Europe.
+Réaliser une analyse de rentabilité sur plusieurs années
 
-Préparer une démonstration technique de la chaîne de traitement dans le cloud.
+Identifier les enjeux RGPD et éthiques liés à l’IA (biais, données personnelles)
+
+Préparer une présentation stratégique pour le COMEX
 
 ***
 
 
 **Étapes du projet**
 
-1. Développement local de la chaîne de traitement
+1. **Backlog de User Stories (SCRUM)**
 
-Environnement PySpark configuré en local
+Rédaction des user stories métiers et IA
 
-Nettoyage des données images (formatage, filtrage, vectorisation)
+Utilisation de MoSCoW pour la priorisation
 
-Réduction de dimension par PCA pour faciliter le traitement massif
+Intégration des critères d’acceptation pour le MVP
 
-Livrable : Notebook local PySpark avec pipeline PCA complet
+Livrable : Backlog SCRUM prêt à être intégré dans un outil de gestion de projet (Jira, Trello…)
 
 
-2. Migration vers AWS EMR (Traitement distribué)
+2. **Estimation des Charges, Coûts et Rentabilité**
 
-Création d’un cluster EMR avec configuration optimisée
+Chiffrage par profil (Dev, Data Scientist, DevOps…)
 
-Utilisation d’AWS S3 pour le stockage des données et des sorties
+Évaluation des coûts cloud Azure (entraîneur IA, stockage, inférence)
 
-Intégration des poids du modèle TensorFlow via broadcast PySpark pour l’inférence
+Analyse de rentabilité sur 3 ans (ROI)
 
-Livrable : Pipeline distribué opérationnel sur AWS EMR
+Livrable : Tableau Excel et graphique de rentabilité
+
+
+3. **Enjeux Légaux et Éthiques**
+
+Formalisation du registre de traitements CNIL
+
+Analyse des risques biais IA, profilage, surreprésentation de certaines morphologies
+
+Livrable : Registre RGPD et matrice de risques éthiques
+
+
+4. **Identification des Risques (Spectre 7D)**
+
+Utilisation de la check-list Spectre 7D pour la gestion des risques projet
+
+Plan de mitigation sur les volets technique, juridique, sécurité, performance IA
+
+Livrable : Plan d’action de gestion des risques
+
+
+5. **Préparation de la Soutenance COMEX**
+
+Rédaction d’une présentation PowerPoint de 20 minutes :
+    
+    Contexte et enjeux métier
+    
+    Architecture fonctionnelle
+    
+    Gains business
+    
+    Backlog priorisé pour le MVP
+    
+    Calendrier agile et ressources nécessaires
+    
+    Risques & conformité RGPD
+
+Livrable : Présentation COMEX + Backlog MVP
 
 ***
 
 **Technologies utilisées**
 
-PySpark : Traitement parallèle des données, PCA
-
-TensorFlow : Utilisation des poids pour inférence distribuée
-
-AWS EMR : Exécution Big Data à grande échelle
-
-AWS S3 : Stockage des données/images et résultats
-
-AWS IAM : Gestion des droits d’accès
-
-PCA : Réduction de dimension sur données d’images
+Gestion de projet  : agile	SCRUM, MoSCoW, Backlog, Sprints
+Cloud Computing	 : Microsoft Azure (entraîneur IA, API, stockage)
+IA & Vision par ordinateur	: Recommandation par similarité d’images
+RGPD : Registre CNIL, Data Minimization, Privacy by Design
+Éthique de l’IA	: Analyse des biais, équité, explicabilité
 
 ***
 
-**RGPD et Scalabilité**
-Traitement des données exclusivement sur instances EU AWS pour conformité RGPD
+**Points de vigilance**
 
-Sécurisation des accès aux buckets S3 via politiques IAM
+Rentabilité : S'assurer d’un retour sur investissement réaliste (3 ans max)
 
-Chaîne pensée pour scalabilité progressive après mise en production de l’app mobile
+Biais algorithmiques : Évaluer les modèles IA sur différents types de morphologies, styles et genres
+
+RGPD : Prévoir le consentement, l’anonymisation, la suppression des données utilisateurs
+
+Coûts Azure : Anticiper les pics de charges et optimiser les ressources cloud
 
 ***
 
